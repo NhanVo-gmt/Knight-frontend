@@ -17,7 +17,7 @@ const MainHeader = () => {
         </Link>
       </div>
       <div className='flex flex-col flex-grow items-start mx-4 justify-center'>
-        <h1 className='text-white font-bold text-2xl mb-3'>Little Knight Wiki</h1>
+        <h1 className='text-white font-bold text-2xl mb-3'>Little Knight</h1>
         <div className='flex flex-row justify-between items-center gap-6'>
           <MainHeaderButton name='Explore' subUrl='Wiki'/>
           <MainHeaderButton name='Character' />
