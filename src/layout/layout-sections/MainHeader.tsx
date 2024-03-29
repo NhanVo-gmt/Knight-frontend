@@ -13,7 +13,7 @@ const MainHeader = () => {
           <LuGamepad2 className='cursor-pointer'/>
         </WhiteReactIcon>
       </div>
-      <div className='flex flex-col items-start mx-4 justify-center'>
+      <div className='flex flex-col flex-grow items-start mx-4 justify-center'>
         <h1 className='text-white font-bold text-2xl mb-3'>Little Knight Wiki</h1>
         <div className='flex flex-row justify-between items-center gap-6'>
           <MainHeaderButton name='Explore' />
@@ -22,6 +22,10 @@ const MainHeader = () => {
           <MainHeaderButton name='Lore' />
           <MainHeaderButton name='Community' />
         </div>
+      </div>
+      <div className='flex gap-6 pr-4'>
+          <MainHeaderButton name="Sign In" />
+          <MainHeaderButton name="Register" />
       </div>
     </div>
   )
