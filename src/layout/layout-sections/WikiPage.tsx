@@ -1,16 +1,16 @@
-import HomePageImage from "@/components/HomePage/HomePageImage";
-import HomePageSection from "@/components/HomePage/HomePageSection";
+import WikiPageImage from "@/components/WikiPage/WikiPageImage";
+import WikiPageSection from "@/components/WikiPage/WikiPageSection";
 import { homepageimages, homepagesections } from "@/data/HomePageData";
 import Image from "next/image";
 import React from "react";
 
-const HomePage = () => {
+const WikiPage = () => {
   return (
-    <div className="flex flex-col min-h-screen w-full py-4 px-8 ">
-      <div className="text-3xl font-bold py-4">Home</div>
+    <div className="flex flex-col min-h-screen w-full py-4 px-8 bg-gradient-to-b from-secondary-dark-hover to-secondary-dark">
+      <div className="text-3xl font-bold py-4">Wiki</div>
       <div>
         {homepagesections.map((item) => (
-          <HomePageSection
+          <WikiPageSection
             key={item.id}
             title={item.title}
             description={item.description}
@@ -18,7 +18,7 @@ const HomePage = () => {
         ))}
         <div className="grid gap-8 gap-y-6 grid-cols-[repeat(auto-fill,minmax(600px,1fr))] justify-center px-10">
           {homepageimages.map((item) => (
-            <HomePageImage key={item.id} imgUrl={item.imgUrl} imgName={item.imgName}/>
+            <WikiPageImage key={item.id} imgUrl={item.imgUrl} imgName={item.imgName}/>
           ))}
         </div>
       </div>
@@ -26,4 +26,4 @@ const HomePage = () => {
   );
 };
 
-export default HomePage;
+export default WikiPage;

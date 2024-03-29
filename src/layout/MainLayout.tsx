@@ -1,12 +1,12 @@
 import React, { ReactNode } from 'react'
 import MainHeader from './layout-sections/MainHeader'
-import HomePage from './layout-sections/HomePage'
+import WikiPage from './layout-sections/WikiPage'
 
 const MainLayout = ({children}) => {
   return (
     <div className='min-h-screen'>
       <MainHeader />
-      <HomePage />
+      <WikiPage />
     </div>
   )
 }

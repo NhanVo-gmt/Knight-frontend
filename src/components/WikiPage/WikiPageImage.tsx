@@ -12,7 +12,7 @@ type HomePageType = {
 const defaultWidth = 700;
 const defaultHeight = 400;
 
-const HomePageImage = ({ imgUrl, width, height, imgName }: HomePageType) => {
+const WikiPageImage = ({ imgUrl, width, height, imgName }: HomePageType) => {
   const [isHover, setIsHover] = useState(false);
 
   return (
@@ -31,4 +31,4 @@ const HomePageImage = ({ imgUrl, width, height, imgName }: HomePageType) => {
   );
 };
 
-export default HomePageImage;
+export default WikiPageImage;
