@@ -1,6 +1,9 @@
 import React from 'react'
 
 const MailNotification = () => {
+
+  const postUrl = ""
+
   return (
     <div className='w-full flex items-center justify-center bg-white relative'>
         <div>
