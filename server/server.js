@@ -1,50 +1,23 @@
 require("dotenv").config();
 
 const express = require('express')
+const cors = require('cors');
+const addMailMember = require("./components/mailsubscription");
+
+
 const app = express();
-app.use(express.static("public"));
-
-const bodyParser = require('body-parser')
-app.use(bodyParser.urlencoded({urlencoded: true}))
-
-const https = require('https')
+app.use(express.json());
 
 app.get("/", (req, res) => {
     res.json("Hello")
 })
 
-app.post("/", (req, res) => {
-    const email = req.body.email;
+app.post("/subscribe", async (req, res) => {
+    email = req.body['email'];
+    console.log(email);
 
-    const data = {
-        members: [
-            {
-                email_address: email,
-                status: "subscribed"
-            }
-        ]
-    }
-
-    const jsonData = JSON.stringify(data);
-
-    const url = `https://us22.admin.mailchimp.com/lists/${process.env.MAILCHIMP_LIST_ID}/`
-
-    const options = {
-        method: "POST",
-        headers: {
-            Authorization: `auth ${process.env.MAILCHIMP_API_KEY}-us22`
-        }
-    }
-
-    const request = https.request(url, options, (res) => {
-        if (res.statusCode == 200)
-        {
-            console.log("Subscribe successfully")
-        }
-    })
-
-    request.write(jsonData);
-    request.end();
+    const result = await addMailMember(email, "hello", "world");
+    res.send(result);
 })
 
 app.listen(process.env.PORT || 3000, () => {
