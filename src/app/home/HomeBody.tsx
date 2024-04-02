@@ -17,7 +17,9 @@ const HomeBody = () => {
           >
             <div className="basis-1/2">
               <div className="text-5xl my-10 font-semibold">{item.title}</div>
-              <div className="text-xl">{item.description}</div>
+              {item.description.map((singleItem, index) => (
+                  <div key={index} className="text-xl line leading-10 mb-4">{singleItem}</div>
+              ))}
             </div>
             <div className="flex flex-grow basis-1/2 transition-all duration-300 relative group hover:scale-105">
               <img src={item.imgUrl} alt={item.imgName} />

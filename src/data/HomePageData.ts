@@ -42,22 +42,30 @@ export const homepageimages = [
 export const homebodysections = [
     {
         id: "1",
-        title: "Brave the Depths of a Forgotten Kingdom",
-        description: "Beneath the fading town of Dirtmouth sleeps a vast, ancient kingdom. Many are drawn beneath the surface, searching for riches, or glory, or answers to old secrets. As the enigmatic Knight, you’ll traverse the depths, unravel its mysteries and conquer its evils.",
+        title: "Seek the past of the Village",
+        description: [
+            "Hidden beneath the tranquil facade of a quaint village lies a trove of secrets waiting to be unearthed. Many are drawn to the cobblestone streets and rustic charm, seeking riches, fame, or the truth behind ancient tales.",
+            "As the knight, you'll navigate through winding alleys and shadowed corners, delving into the village's enigmatic past, solving its mysteries, and confronting the darkness lurking within."
+        ] ,
         imgUrl: "/HomeImages/farm.png",
         imgName: "Farm"
     },
     {
         id: "2",
-        title: "Use Your Skills and Reflexes to Survive",
-        description: "Hollow Knight is a challenging 2D action-adventure. You’ll explore twisting caverns, battle tainted creatures and escape intricate traps, all to solve an ancient long-hidden mystery",
+        title: "Harness Your Skills and Wits to Prevail",
+        description: [
+            "Embark on an exhilarating adventure in Little Knight, a captivating 2D action-adventure experience. Navigate through labyrinthine passages, confront strong foes, and outmaneuver intricate obstacles, all while unraveling the threads of the long-forgotten",
+        ],
         imgUrl: "/HomeImages/forbiddenland.png",
         imgName: "Forbiddenland"
     },
     {
         id: "3",
         title: "Brave the Depths of a Forgotten Kingdom",
-        description: "The world of Hollow Knight is brought to life in vivid, moody detail, its caverns alive with bizarre and terrifying creatures, each animated by hand in a traditional 2D style. Every new area you’ll discover is beautifully unique and strange, teeming with new creatures and characters to discover. The world of Hollow Knight is one worth exploring just to take in the sights and discover new wonders hidden off of the beaten path.",
+        description: [
+            "In Little Knight, the world is build with full of creatures and dark atmospheres. Every creature is created with uniqueness in a classic 2D style, making them unique and sometimes frightening.",
+            "Each area you find is special, filled with new creatures and characters. Exploring Hollow Knight is like taking a journey through a strange and wonderful world, where every corner hides something new and exciting.",
+        ],
         imgUrl: "/HomeImages/forest.png",
         imgName: "Forest"
     },
