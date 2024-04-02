@@ -2,7 +2,7 @@ require("dotenv").config();
 
 const express = require('express')
 const cors = require('cors');
-const addMailMember = require("./components/mailsubscription");
+const addMailMember = require("./controllers/mailsubscription");
 
 
 const app = express();
@@ -16,8 +16,7 @@ app.post("/subscribe", async (req, res) => {
     email = req.body['email'];
     console.log(email);
 
-    const result = await addMailMember(email, "hello", "world");
-    res.send(result);
+    await addMailMember(req, res);
 })
 
 app.listen(process.env.PORT || 3000, () => {
