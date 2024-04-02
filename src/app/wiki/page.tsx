@@ -1,7 +1,6 @@
 import WikiPageImage from "@/components/WikiPage/WikiPageImage";
 import WikiPageSection from "@/components/WikiPage/WikiPageSection";
 import { homepageimages, homepagesections } from "@/data/HomePageData";
-import Image from "next/image";
 import React from "react";
 
 const WikiPage = () => {
