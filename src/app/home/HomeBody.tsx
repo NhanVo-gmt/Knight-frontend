@@ -1,29 +1,29 @@
+import { homebodysections } from "@/data/HomePageData";
 import React from "react";
 
 const HomeBody = () => {
   return (
-    <div className="bg-black">
+    <div className="bg-secondary-dark-hover">
       <div className="flex items-center justify-center p-16">
-        <div className="text-5xl">Descend into the dark</div>
+        <div className="text-6xl font-bold">Descend into the dark</div>
       </div>
-      <div className="flex mx-10">
-        <div className="grid grid-cols-2 gap-40">
-          <div>
-            <div className="text-5xl my-10 font-bold">
-              Brave the Depths of a Forgotten Kingdom
+      <div className="flex flex-col mx-20 gap-y-20">
+        {homebodysections.map((item, index) => (
+          <div key={item.id} className={`flex gap-40 items-center ${index % 2 == 0 ? "flex-row" : "flex-row-reverse"}`}>
+            <div className="basis-1/2">
+              <div className="text-5xl my-10 font-semibold">
+                {item.title}
+              </div>
+              <div className="text-xl">
+                {item.description}
+              </div>
             </div>
-            <div className="text-xl">
-              Beneath the fading town of Dirtmouth sleeps a vast, ancient
-              kingdom. Many are drawn beneath the surface, searching for riches,
-              or glory, or answers to old secrets. As the enigmatic Knight,
-              you’ll traverse the depths, unravel its mysteries and conquer its
-              evils.
+            <div className="flex flex-grow basis-1/2 transition-transform duration-300 hover:scale-105 relative">
+              <img src={item.imgUrl} alt={item.imgName} />
+              <div className="absolute hidden hover:block text-10xl">Hello</div>
             </div>
           </div>
-          <div className="flex-shrink-0">
-            <img src="/HomeImages/farm.png" alt="" />
-          </div>
-        </div>
+        ))}
       </div>
     </div>
   );
