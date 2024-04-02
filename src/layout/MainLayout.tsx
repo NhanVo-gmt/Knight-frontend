@@ -1,8 +1,11 @@
 import React, { ReactNode } from 'react'
 import MainHeader from './layout-sections/MainHeader'
-import HomePage from '@/app/page'
 
-const MainLayout = ({children}) => {
+type MainLayoutType = {
+  children: ReactNode
+}
+
+const MainLayout = ({children} : MainLayoutType) => {
   return (
     <div className='min-h-screen'>
       <MainHeader />

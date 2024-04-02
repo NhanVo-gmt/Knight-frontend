@@ -21,7 +21,8 @@ const config: Config = {
           dark: colors.neutral[800],
           ["dark-hover"]: colors.neutral[900]
         }
-      }
+      },
+      display: ["group-hover"],
     },
   },
   plugins: [],
