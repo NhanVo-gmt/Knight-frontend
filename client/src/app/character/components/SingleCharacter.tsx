@@ -1,16 +1,22 @@
+"use client"
+
+import Link from 'next/link'
 import React from 'react'
 
 type SingleCharacterType = {
+    id: number;
     name: string,
     imgUrl: string,
 }
 
-const SingleCharacterSection = ({name, imgUrl} : SingleCharacterType) => {
+const SingleCharacterSection = ({id, name, imgUrl} : SingleCharacterType) => {
   return (
-    <div className='flex flex-col items-center'>
-        <img src={imgUrl} alt="" className='w-[200px] h-[400px] object-contain'/>
-        <div className='text-5xl'>{name}</div>
-    </div>
+    <Link href={`/character/${id}`}>
+        <div className='flex flex-col items-center cursor-pointer p-6'>
+            <img src={imgUrl} alt="" className='w-[300px] h-[400px] object-contain'/>
+            <div className='text-4xl'>{name}</div>
+        </div>
+    </Link>
   )
 }
 
