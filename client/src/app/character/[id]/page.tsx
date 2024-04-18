@@ -11,8 +11,8 @@ export default function CharacterPage({ params }: CharacterPageType) {
   const character = characters.find((item) => item.id == params.id);
 
   return (
-    <div className="bg-secondary-dark-hover">
-        <div className='flex flex-row p-20 gap-x-10'>
+    <div className="bg-secondary-dark-hover min-h-screen">
+        <div className='flex flex-row p-32 gap-x-20'>
         <div className="basis-1/2">
             <div className="text-5xl my-10 font-bold">{character?.name}</div>
             <div className="text-2xl">{character?.description}</div>

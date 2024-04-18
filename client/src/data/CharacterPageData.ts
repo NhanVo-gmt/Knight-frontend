@@ -29,7 +29,7 @@ export const characters = [
         description: [
             "The Dark Mage, a rare sight in the forbidden lands, commands the mysterious orb within his range. Cloaked in swirling shadows, their incantations weave spells of darkness and despair, unleashing magical devastation upon unsuspecting foes."
         ] ,
-        imgUrl: "/CharacterImages/farm.png",
+        imgUrl: "/CharacterImages/Bat.png",
     },
     {
         id: 5,
@@ -37,6 +37,6 @@ export const characters = [
         description: [
             "The Dark Mage, a rare sight in the forbidden lands, commands the mysterious orb within his range. Cloaked in swirling shadows, their incantations weave spells of darkness and despair, unleashing magical devastation upon unsuspecting foes."
         ] ,
-        imgUrl: "/CharacterImages/farm.png",
+        imgUrl: "/CharacterImages/ShieldMan.png",
     },
 ]

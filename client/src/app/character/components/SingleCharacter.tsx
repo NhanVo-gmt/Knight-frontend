@@ -12,8 +12,8 @@ type SingleCharacterType = {
 const SingleCharacterSection = ({id, name, imgUrl} : SingleCharacterType) => {
   return (
     <Link href={`/character/${id}`}>
-        <div className='flex flex-col items-center cursor-pointer p-6'>
-            <img src={imgUrl} alt="" className='w-[300px] h-[400px] object-contain'/>
+        <div className='flex flex-col items-center cursor-pointer p-6 gap-y-10'>
+            <img src={imgUrl} alt="" className='object-contain h-[200px] '/>
             <div className='text-4xl'>{name}</div>
         </div>
     </Link>
